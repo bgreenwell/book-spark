@@ -5,13 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "215748364",
+    "hash" : "0",
     "id" : "9B65A723",
     "lastKnownWriteTime" : 1532996584,
     "last_content_update" : 1532996584,
     "path" : "~/Dropbox/devel/book-spark/index.Rmd",
     "project_path" : "index.Rmd",
     "properties" : {
+        "cursorPosition" : "23,0",
+        "scrollLine" : "0"
     },
     "read_only" : false,
     "read_only_alternatives" : [

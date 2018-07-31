@@ -1,22 +1,24 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1532996587006.000,
+    "created" : 1532997674330.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "2791391532",
-    "id" : "996A3A4A",
-    "lastKnownWriteTime" : 1532996584,
-    "last_content_update" : 1532996584,
+    "hash" : "0",
+    "id" : "ABE99B2E",
+    "lastKnownWriteTime" : 1532997573,
+    "last_content_update" : 1532997573,
     "path" : "~/Dropbox/devel/book-spark/README.md",
     "project_path" : "README.md",
     "properties" : {
+        "cursorPosition" : "18,2",
+        "scrollLine" : "0"
     },
     "read_only" : false,
     "read_only_alternatives" : [
     ],
-    "relative_order" : 1,
+    "relative_order" : 4,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "markdown"

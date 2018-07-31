@@ -1,1 +1,19 @@
-This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). Please see the page "Get Started" at https://bookdown.org/ for how to compile this example.
+What better way to learn the R interface to Apache Spark than to write a book about it?
+
+What this book will cover:
+
+* Part I
+
+  - Introduction to Spark (what is Spark, installation, etc.)
+  
+  - Interfacing R with Spark via the `sparklyr` package (connectiong to Spark, data wrangling with `dplyr`, etc.)
+
+  - Essentials of machine learning (cross-validation, target leakage, etc.)
+  
+* Part II
+
+  - Machine learning in Spark via MLlib
+  
+  - Machine learning in Spark via the `rsparkling` package
+  
+  
