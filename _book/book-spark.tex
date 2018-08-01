@@ -24,8 +24,8 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{hyperref}
 \hypersetup{unicode=true,
-            pdftitle={Distributed Machine Learning in R with Apache Spark: An Introduction Using sparklyr and rsparkling},
-            pdfauthor={Yihui Xie},
+            pdftitle={Distributed Machine Learning in R with Apache Spark},
+            pdfauthor={Brandon M. Greenwell},
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
@@ -117,17 +117,16 @@
 
 \setlength{\droptitle}{-2em}
 
-  \title{Distributed Machine Learning in R with Apache Spark: An Introduction
-Using sparklyr and rsparkling}
+  \title{Distributed Machine Learning in R with Apache Spark}
     \pretitle{\vspace{\droptitle}\centering\huge}
   \posttitle{\par}
-  \subtitle{Abc}
-  \author{Yihui Xie}
+  \subtitle{An Introduction to the sparklyr and rsparkling packages}
+  \author{Brandon M. Greenwell}
     \preauthor{\centering\large\emph}
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2018-07-30}
+    \date{2018-08-01}
 
 \usepackage{booktabs}
 
@@ -185,13 +184,215 @@ TBD.
 \hypertarget{intro}{%
 \chapter{Introduction to Apache Spark}\label{intro}}
 
-TBD.
-
 \hypertarget{what-is-spark}{%
-\section{What is Spark}\label{what-is-spark}}
+\section{What is Spark?}\label{what-is-spark}}
+
+\begin{itemize}
+\item
+  Apache Spark (\url{https://spark.apache.org/}) is a unified analytics
+  engine and cluster computing framework for large-scale data
+  processing.
+\item
+  Does not use \emph{MapReduce} as an execution engine. Rather, Spark
+  uses its own distributed runtime to execute work on a cluster.
+\item
+  It is designed to perform both batch processing (similar to MapReduce)
+  and new workloads like streaming, interactive queries, and machine
+  learning
+\item
+  Spark is closely integrated with \emph{Hadoop}, an open-source
+  software framework for storing data and running applications on
+  clusters.
+
+  \begin{itemize}
+  \item
+    Spark can run on \emph{YARN}. This is the most convenient way to use
+    Spark when you have an existing Hadoop cluster.
+  \item
+    Spark is compatible with Hadoop data (e.g., Spark works with Hadoop
+    file formats and storage backends like \emph{parquet}).
+  \item
+    To be clear, you do not need Hadoop to run Spark, but you'll need
+    some form of shared file system in order to run Spark on a cluster.
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{why-use-spark}{%
+\section{Why use Spark?}\label{why-use-spark}}
+
+\begin{itemize}
+\item
+  The most notable feature of Spark is its abaility to keep large
+  working data sets in memory \emph{between jobs}.
+\item
+  There are two types of preccesses that benefit greatly from Sparks
+  framework:
+
+  \begin{itemize}
+  \item
+    Iterative algorithms.
+  \item
+    Interactive analysis.
+  \end{itemize}
+\item
+  Spark uses a DAG (\emph{directed acyclic graph}) engine which can
+  process arbitrary pipelines of operators that can be translated into a
+  single job for the user.
+\item
+  Spark has a large community of experienced users.
+\item
+  Spark provides APIs to three languages: Scala, Java, Python, and R
+  (through the \texttt{SparkR} package). An R interface to Apache Spark
+  is also provided by the \texttt{sparklyr} package (which we'll
+  primarily be using in this book). Spark also has several built-in SQL
+  functions (Spark SQL).
+\end{itemize}
+
+\hypertarget{spark-dataframes}{%
+\section{Spark DataFrames}\label{spark-dataframes}}
+
+A Spark DataFrame is an optimized columnar data structure similar in
+spirit to R/Pandas data frames. They can be constructed from a wide
+variety of different including: CSV files, JSON files, parquet files,
+Hive tables, external databases, data stored on HDFS, and many more. The
+DataFrame API is available in Scala, Java, Python, and R. The
+\texttt{sparklyr} package provides a \texttt{dplyr} backend that works
+seemlessly with Spark DataFrames. There is also the concept of Spark
+Datasets, but it will not be discussed in this book.
+
+\hypertarget{apis-to-spark}{%
+\section{APIs to Spark}\label{apis-to-spark}}
+
+\hypertarget{scala}{%
+\subsection{Scala}\label{scala}}
+
+In a terminal, you can start a Spark session by typing
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{spark-shell}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{java}{%
+\subsection{Java}\label{java}}
+
+\hypertarget{python}{%
+\subsection{Python}\label{python}}
+
+\hypertarget{r}{%
+\subsection{R}\label{r}}
+
+\begin{itemize}
+\item
+  The \texttt{sparklyr} package:
+
+  \begin{itemize}
+  \item
+    Allows you to connect to Spark from R.
+  \item
+    Provides a complete \texttt{dplyr} backend.
+  \item
+    Provdes a SQL interface via the \texttt{DBI} package.
+  \item
+    Allows you to leverage Spark's distributed machine learning library
+    (MLlib) from R.
+  \item
+    Allows you to leverage H2O' machine learning library
+    (SparkingWater).
+  \item
+    Allows you to create extensions that call the full Spark API.
+  \item
+    Provides interfaces to Spark packages.
+  \item
+    For more information visit \url{http://spark.rstudio.com/}.
+  \end{itemize}
+\end{itemize}
+
+\begin{figure}
+
+\includegraphics[width=0.7\linewidth]{illustrations/sparklyr-illustration} \hfill{}
+
+\caption{Source: http://spark.rstudio.com/tools/readme/sparklyr-illustration.png.}\label{fig:sparklyr-illustration}
+\end{figure}
+
+\begin{itemize}
+\tightlist
+\item
+  The \texttt{sparkR} package:
+\end{itemize}
+
+\hypertarget{spark-sql}{%
+\subsection{Spark SQL}\label{spark-sql}}
+
+\begin{itemize}
+\item
+  You can use of Spark SQL to execute SQL queries.
+\item
+  Spark SQL can also be used to read data from an existing \emph{Hive}
+  installation.
+\end{itemize}
 
 \hypertarget{installing-spark}{%
 \section{Installing Spark}\label{installing-spark}}
+
+The easiest way to install spark is to use the
+\texttt{sparklyr::spark\_install()} function. For example, to install
+Spark version 2.3.0, use
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{sparklyr}\OperatorTok{::}\KeywordTok{spark_install}\NormalTok{(}
+  \DataTypeTok{version =} \StringTok{"2.3.0"}\NormalTok{,}
+  \DataTypeTok{hadoop_version =} \OtherTok{NULL}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+For details, see \texttt{?sparklyr::spark\_install}. To see what Spark
+installations are available (along with there associated Hadoop
+versions), use
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(dplyr)}
+\NormalTok{sparklyr}\OperatorTok{::}\KeywordTok{spark_available_versions}\NormalTok{(}\DataTypeTok{show_hadoop =} \OtherTok{TRUE}\NormalTok{) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{arrange}\NormalTok{(}\KeywordTok{desc}\NormalTok{(spark), }\KeywordTok{desc}\NormalTok{(hadoop)) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{slice}\NormalTok{(}\DecValTok{1}\OperatorTok{:}\DecValTok{5}\NormalTok{)  }\CommentTok{# only look at five latest versions}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   spark hadoop
+## 1 2.3.0    2.7
+## 2 2.3.0    2.6
+## 3 2.2.1    2.7
+## 4 2.2.1    2.6
+## 5 2.2.0    2.7
+\end{verbatim}
+
+\hypertarget{linux}{%
+\subsection{Linux}\label{linux}}
+
+\hypertarget{macos}{%
+\subsection{MacOS}\label{macos}}
+
+\hypertarget{windows}{%
+\subsection{Windows}\label{windows}}
+
+\begin{itemize}
+\tightlist
+\item
+  By a Unix machine 🤣.
+\end{itemize}
+
+\hypertarget{glossary-of-useful-terms}{%
+\section{Glossary of useful terms}\label{glossary-of-useful-terms}}
+
+\hypertarget{further-reading}{%
+\section{Further reading}\label{further-reading}}
+
+TBD.
 
 \hypertarget{interfacing-r-with-spark}{%
 \chapter{Interfacing R with Spark}\label{interfacing-r-with-spark}}
@@ -201,9 +402,49 @@ TBD.
 \hypertarget{the-sparklyr-package}{%
 \section{The sparklyr package}\label{the-sparklyr-package}}
 
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(sparklyr)}
+\NormalTok{sc <-}\StringTok{ }\KeywordTok{spark_connect}\NormalTok{(}\StringTok{"local[4]"}\NormalTok{)}
+\KeywordTok{class}\NormalTok{(sc)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "spark_connection"       "spark_shell_connection"
+## [3] "DBIConnection"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{pi_est <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{() \{  }\CommentTok{# Monte-Carlo estimate of pi}
+\NormalTok{  x <-}\StringTok{ }\KeywordTok{runif}\NormalTok{(}\DecValTok{100000}\NormalTok{)}
+\NormalTok{  y <-}\StringTok{ }\KeywordTok{runif}\NormalTok{(}\DecValTok{100000}\NormalTok{)}
+  \DecValTok{4} \OperatorTok{*}\StringTok{ }\KeywordTok{mean}\NormalTok{(x}\OperatorTok{^}\DecValTok{2} \OperatorTok{+}\StringTok{ }\NormalTok{y}\OperatorTok{^}\DecValTok{2} \OperatorTok{<}\StringTok{ }\DecValTok{1}\NormalTok{)}
+\NormalTok{\}}
+
+\KeywordTok{library}\NormalTok{(dplyr)}
+
+\KeywordTok{sdf_len}\NormalTok{(sc, }\DataTypeTok{length =} \DecValTok{10}\NormalTok{, }\DataTypeTok{repartition =} \DecValTok{10}\NormalTok{) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{spark_apply}\NormalTok{(pi_est) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{summarize}\NormalTok{(}\StringTok{`}\DataTypeTok{Pi estimate}\StringTok{`}\NormalTok{ =}\StringTok{ }\KeywordTok{mean}\NormalTok{(id, }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # Source:   lazy query [?? x 1]
+## # Database: spark_connection
+##   `Pi estimate`
+##           <dbl>
+## 1          3.14
+\end{verbatim}
+
 \hypertarget{data-wrangling-in-spark-with-dplyr}{%
 \section{Data wrangling in Spark with
 dplyr}\label{data-wrangling-in-spark-with-dplyr}}
+
+\hypertarget{the-sparkr-package}{%
+\section{The sparkR package}\label{the-sparkr-package}}
 
 \hypertarget{machine-learning-essentials}{%
 \chapter{Machine Learning

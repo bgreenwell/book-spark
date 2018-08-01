@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Distributed Machine Learning in R with Apache Spark: An Introduction Using sparklyr and rsparkling</title>
+  <title>Distributed Machine Learning in R with Apache Spark</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook.">
   <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
-  <meta property="og:title" content="Distributed Machine Learning in R with Apache Spark: An Introduction Using sparklyr and rsparkling" />
+  <meta property="og:title" content="Distributed Machine Learning in R with Apache Spark" />
   <meta property="og:type" content="book" />
   
   
@@ -17,15 +17,15 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Distributed Machine Learning in R with Apache Spark: An Introduction Using sparklyr and rsparkling" />
+  <meta name="twitter:title" content="Distributed Machine Learning in R with Apache Spark" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
 
-<meta name="author" content="Yihui Xie">
+<meta name="author" content="Brandon M. Greenwell">
 
 
-<meta name="date" content="2018-07-30">
+<meta name="date" content="2018-08-01">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -134,12 +134,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
 <li class="part"><span><b>I Part I</b></span></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction to Apache Spark</a><ul>
-<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#what-is-spark"><i class="fa fa-check"></i><b>1.1</b> What is Spark</a></li>
-<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#installing-spark"><i class="fa fa-check"></i><b>1.2</b> Installing Spark</a></li>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#what-is-spark"><i class="fa fa-check"></i><b>1.1</b> What is Spark?</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#why-use-spark"><i class="fa fa-check"></i><b>1.2</b> Why use Spark?</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#spark-dataframes"><i class="fa fa-check"></i><b>1.3</b> Spark DataFrames</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#apis-to-spark"><i class="fa fa-check"></i><b>1.4</b> APIs to Spark</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="intro.html"><a href="intro.html#scala"><i class="fa fa-check"></i><b>1.4.1</b> Scala</a></li>
+<li class="chapter" data-level="1.4.2" data-path="intro.html"><a href="intro.html#java"><i class="fa fa-check"></i><b>1.4.2</b> Java</a></li>
+<li class="chapter" data-level="1.4.3" data-path="intro.html"><a href="intro.html#python"><i class="fa fa-check"></i><b>1.4.3</b> Python</a></li>
+<li class="chapter" data-level="1.4.4" data-path="intro.html"><a href="intro.html#r"><i class="fa fa-check"></i><b>1.4.4</b> R</a></li>
+<li class="chapter" data-level="1.4.5" data-path="intro.html"><a href="intro.html#spark-sql"><i class="fa fa-check"></i><b>1.4.5</b> Spark SQL</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#installing-spark"><i class="fa fa-check"></i><b>1.5</b> Installing Spark</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="intro.html"><a href="intro.html#linux"><i class="fa fa-check"></i><b>1.5.1</b> Linux</a></li>
+<li class="chapter" data-level="1.5.2" data-path="intro.html"><a href="intro.html#macos"><i class="fa fa-check"></i><b>1.5.2</b> MacOS</a></li>
+<li class="chapter" data-level="1.5.3" data-path="intro.html"><a href="intro.html#windows"><i class="fa fa-check"></i><b>1.5.3</b> Windows</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#glossary-of-useful-terms"><i class="fa fa-check"></i><b>1.6</b> Glossary of useful terms</a></li>
+<li class="chapter" data-level="1.7" data-path="intro.html"><a href="intro.html#further-reading"><i class="fa fa-check"></i><b>1.7</b> Further reading</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="interfacing-r-with-spark.html"><a href="interfacing-r-with-spark.html"><i class="fa fa-check"></i><b>2</b> Interfacing R with Spark</a><ul>
 <li class="chapter" data-level="2.1" data-path="interfacing-r-with-spark.html"><a href="interfacing-r-with-spark.html#the-sparklyr-package"><i class="fa fa-check"></i><b>2.1</b> The sparklyr package</a></li>
 <li class="chapter" data-level="2.2" data-path="interfacing-r-with-spark.html"><a href="interfacing-r-with-spark.html#data-wrangling-in-spark-with-dplyr"><i class="fa fa-check"></i><b>2.2</b> Data wrangling in Spark with dplyr</a></li>
+<li class="chapter" data-level="2.3" data-path="interfacing-r-with-spark.html"><a href="interfacing-r-with-spark.html#the-sparkr-package"><i class="fa fa-check"></i><b>2.3</b> The sparkR package</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="machine-learning-essentials.html"><a href="machine-learning-essentials.html"><i class="fa fa-check"></i><b>3</b> Machine Learning Essentials</a></li>
 <li class="part"><span><b>II Part II</b></span></li>
@@ -158,7 +174,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Distributed Machine Learning in R with Apache Spark: An Introduction Using sparklyr and rsparkling</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Distributed Machine Learning in R with Apache Spark</a>
           </h1>
         </div>
 
@@ -168,12 +184,121 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="intro" class="section level1">
 <h1><span class="header-section-number">Chapter 1</span> Introduction to Apache Spark</h1>
-<p>TBD.</p>
 <div id="what-is-spark" class="section level2">
-<h2><span class="header-section-number">1.1</span> What is Spark</h2>
+<h2><span class="header-section-number">1.1</span> What is Spark?</h2>
+<ul>
+<li><p>Apache Spark (<a href="https://spark.apache.org/" class="uri">https://spark.apache.org/</a>) is a unified analytics engine and cluster computing framework for large-scale data processing.</p></li>
+<li><p>Does not use <em>MapReduce</em> as an execution engine. Rather, Spark uses its own distributed runtime to execute work on a cluster.</p></li>
+<li><p>It is designed to perform both batch processing (similar to MapReduce) and new workloads like streaming, interactive queries, and machine learning</p></li>
+<li><p>Spark is closely integrated with <em>Hadoop</em>, an open-source software framework for storing data and running applications on clusters.</p>
+<ul>
+<li><p>Spark can run on <em>YARN</em>. This is the most convenient way to use Spark when you have an existing Hadoop cluster.</p></li>
+<li><p>Spark is compatible with Hadoop data (e.g., Spark works with Hadoop file formats and storage backends like <em>parquet</em>).</p></li>
+<li><p>To be clear, you do not need Hadoop to run Spark, but you’ll need some form of shared file system in order to run Spark on a cluster.</p></li>
+</ul></li>
+</ul>
+</div>
+<div id="why-use-spark" class="section level2">
+<h2><span class="header-section-number">1.2</span> Why use Spark?</h2>
+<ul>
+<li><p>The most notable feature of Spark is its abaility to keep large working data sets in memory <em>between jobs</em>.</p></li>
+<li><p>There are two types of preccesses that benefit greatly from Sparks framework:</p>
+<ul>
+<li><p>Iterative algorithms.</p></li>
+<li><p>Interactive analysis.</p></li>
+</ul></li>
+<li><p>Spark uses a DAG (<em>directed acyclic graph</em>) engine which can process arbitrary pipelines of operators that can be translated into a single job for the user.</p></li>
+<li><p>Spark has a large community of experienced users.</p></li>
+<li><p>Spark provides APIs to three languages: Scala, Java, Python, and R (through the <code>SparkR</code> package). An R interface to Apache Spark is also provided by the <code>sparklyr</code> package (which we’ll primarily be using in this book). Spark also has several built-in SQL functions (Spark SQL).</p></li>
+</ul>
+</div>
+<div id="spark-dataframes" class="section level2">
+<h2><span class="header-section-number">1.3</span> Spark DataFrames</h2>
+<p>A Spark DataFrame is an optimized columnar data structure similar in spirit to R/Pandas data frames. They can be constructed from a wide variety of different including: CSV files, JSON files, parquet files, Hive tables, external databases, data stored on HDFS, and many more. The DataFrame API is available in Scala, Java, Python, and R. The <code>sparklyr</code> package provides a <code>dplyr</code> backend that works seemlessly with Spark DataFrames. There is also the concept of Spark Datasets, but it will not be discussed in this book.</p>
+</div>
+<div id="apis-to-spark" class="section level2">
+<h2><span class="header-section-number">1.4</span> APIs to Spark</h2>
+<div id="scala" class="section level3">
+<h3><span class="header-section-number">1.4.1</span> Scala</h3>
+<p>In a terminal, you can start a Spark session by typing</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="ex">spark-shell</span></a></code></pre></div>
+</div>
+<div id="java" class="section level3">
+<h3><span class="header-section-number">1.4.2</span> Java</h3>
+</div>
+<div id="python" class="section level3">
+<h3><span class="header-section-number">1.4.3</span> Python</h3>
+</div>
+<div id="r" class="section level3">
+<h3><span class="header-section-number">1.4.4</span> R</h3>
+<ul>
+<li><p>The <code>sparklyr</code> package:</p>
+<ul>
+<li><p>Allows you to connect to Spark from R.</p></li>
+<li><p>Provides a complete <code>dplyr</code> backend.</p></li>
+<li><p>Provdes a SQL interface via the <code>DBI</code> package.</p></li>
+<li>Allows you to leverage Spark’s distributed machine learning library (MLlib) from R.</li>
+<li><p>Allows you to leverage H2O’ machine learning library (SparkingWater).</p></li>
+<li><p>Allows you to create extensions that call the full Spark API.</p></li>
+<li><p>Provides interfaces to Spark packages.</p></li>
+<li><p>For more information visit <a href="http://spark.rstudio.com/" class="uri">http://spark.rstudio.com/</a>.</p></li>
+</ul></li>
+</ul>
+<div class="figure" style="text-align: left"><span id="fig:sparklyr-illustration"></span>
+<img src="illustrations/sparklyr-illustration.png" alt="Source: http://spark.rstudio.com/tools/readme/sparklyr-illustration.png." width="70%" />
+<p class="caption">
+Figure 1.1: Source: <a href="http://spark.rstudio.com/tools/readme/sparklyr-illustration.png" class="uri">http://spark.rstudio.com/tools/readme/sparklyr-illustration.png</a>.
+</p>
+</div>
+<ul>
+<li>The <code>sparkR</code> package:</li>
+</ul>
+</div>
+<div id="spark-sql" class="section level3">
+<h3><span class="header-section-number">1.4.5</span> Spark SQL</h3>
+<ul>
+<li><p>You can use of Spark SQL to execute SQL queries.</p></li>
+<li><p>Spark SQL can also be used to read data from an existing <em>Hive</em> installation.</p></li>
+</ul>
+</div>
 </div>
 <div id="installing-spark" class="section level2">
-<h2><span class="header-section-number">1.2</span> Installing Spark</h2>
+<h2><span class="header-section-number">1.5</span> Installing Spark</h2>
+<p>The easiest way to install spark is to use the <code>sparklyr::spark_install()</code> function. For example, to install Spark version 2.3.0, use</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">sparklyr<span class="op">::</span><span class="kw">spark_install</span>(</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">  <span class="dt">version =</span> <span class="st">&quot;2.3.0&quot;</span>,</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">  <span class="dt">hadoop_version =</span> <span class="ot">NULL</span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4">)</a></code></pre></div>
+<p>For details, see <code>?sparklyr::spark_install</code>. To see what Spark installations are available (along with there associated Hadoop versions), use</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb4-2" data-line-number="2">sparklyr<span class="op">::</span><span class="kw">spark_available_versions</span>(<span class="dt">show_hadoop =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(spark), <span class="kw">desc</span>(hadoop)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="st">  </span><span class="kw">slice</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>)  <span class="co"># only look at five latest versions</span></a></code></pre></div>
+<pre><code>##   spark hadoop
+## 1 2.3.0    2.7
+## 2 2.3.0    2.6
+## 3 2.2.1    2.7
+## 4 2.2.1    2.6
+## 5 2.2.0    2.7</code></pre>
+<div id="linux" class="section level3">
+<h3><span class="header-section-number">1.5.1</span> Linux</h3>
+</div>
+<div id="macos" class="section level3">
+<h3><span class="header-section-number">1.5.2</span> MacOS</h3>
+</div>
+<div id="windows" class="section level3">
+<h3><span class="header-section-number">1.5.3</span> Windows</h3>
+<ul>
+<li>By a Unix machine 🤣.</li>
+</ul>
+</div>
+</div>
+<div id="glossary-of-useful-terms" class="section level2">
+<h2><span class="header-section-number">1.6</span> Glossary of useful terms</h2>
+</div>
+<div id="further-reading" class="section level2">
+<h2><span class="header-section-number">1.7</span> Further reading</h2>
+<p>TBD.</p>
 
 </div>
 </div>

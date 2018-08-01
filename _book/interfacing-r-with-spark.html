@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Distributed Machine Learning in R with Apache Spark: An Introduction Using sparklyr and rsparkling</title>
+  <title>Distributed Machine Learning in R with Apache Spark</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook.">
   <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
-  <meta property="og:title" content="Distributed Machine Learning in R with Apache Spark: An Introduction Using sparklyr and rsparkling" />
+  <meta property="og:title" content="Distributed Machine Learning in R with Apache Spark" />
   <meta property="og:type" content="book" />
   
   
@@ -17,15 +17,15 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Distributed Machine Learning in R with Apache Spark: An Introduction Using sparklyr and rsparkling" />
+  <meta name="twitter:title" content="Distributed Machine Learning in R with Apache Spark" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
 
-<meta name="author" content="Yihui Xie">
+<meta name="author" content="Brandon M. Greenwell">
 
 
-<meta name="date" content="2018-07-30">
+<meta name="date" content="2018-08-01">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -134,12 +134,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
 <li class="part"><span><b>I Part I</b></span></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction to Apache Spark</a><ul>
-<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#what-is-spark"><i class="fa fa-check"></i><b>1.1</b> What is Spark</a></li>
-<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#installing-spark"><i class="fa fa-check"></i><b>1.2</b> Installing Spark</a></li>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#what-is-spark"><i class="fa fa-check"></i><b>1.1</b> What is Spark?</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#why-use-spark"><i class="fa fa-check"></i><b>1.2</b> Why use Spark?</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#spark-dataframes"><i class="fa fa-check"></i><b>1.3</b> Spark DataFrames</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#apis-to-spark"><i class="fa fa-check"></i><b>1.4</b> APIs to Spark</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="intro.html"><a href="intro.html#scala"><i class="fa fa-check"></i><b>1.4.1</b> Scala</a></li>
+<li class="chapter" data-level="1.4.2" data-path="intro.html"><a href="intro.html#java"><i class="fa fa-check"></i><b>1.4.2</b> Java</a></li>
+<li class="chapter" data-level="1.4.3" data-path="intro.html"><a href="intro.html#python"><i class="fa fa-check"></i><b>1.4.3</b> Python</a></li>
+<li class="chapter" data-level="1.4.4" data-path="intro.html"><a href="intro.html#r"><i class="fa fa-check"></i><b>1.4.4</b> R</a></li>
+<li class="chapter" data-level="1.4.5" data-path="intro.html"><a href="intro.html#spark-sql"><i class="fa fa-check"></i><b>1.4.5</b> Spark SQL</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#installing-spark"><i class="fa fa-check"></i><b>1.5</b> Installing Spark</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="intro.html"><a href="intro.html#linux"><i class="fa fa-check"></i><b>1.5.1</b> Linux</a></li>
+<li class="chapter" data-level="1.5.2" data-path="intro.html"><a href="intro.html#macos"><i class="fa fa-check"></i><b>1.5.2</b> MacOS</a></li>
+<li class="chapter" data-level="1.5.3" data-path="intro.html"><a href="intro.html#windows"><i class="fa fa-check"></i><b>1.5.3</b> Windows</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#glossary-of-useful-terms"><i class="fa fa-check"></i><b>1.6</b> Glossary of useful terms</a></li>
+<li class="chapter" data-level="1.7" data-path="intro.html"><a href="intro.html#further-reading"><i class="fa fa-check"></i><b>1.7</b> Further reading</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="interfacing-r-with-spark.html"><a href="interfacing-r-with-spark.html"><i class="fa fa-check"></i><b>2</b> Interfacing R with Spark</a><ul>
 <li class="chapter" data-level="2.1" data-path="interfacing-r-with-spark.html"><a href="interfacing-r-with-spark.html#the-sparklyr-package"><i class="fa fa-check"></i><b>2.1</b> The sparklyr package</a></li>
 <li class="chapter" data-level="2.2" data-path="interfacing-r-with-spark.html"><a href="interfacing-r-with-spark.html#data-wrangling-in-spark-with-dplyr"><i class="fa fa-check"></i><b>2.2</b> Data wrangling in Spark with dplyr</a></li>
+<li class="chapter" data-level="2.3" data-path="interfacing-r-with-spark.html"><a href="interfacing-r-with-spark.html#the-sparkr-package"><i class="fa fa-check"></i><b>2.3</b> The sparkR package</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="machine-learning-essentials.html"><a href="machine-learning-essentials.html"><i class="fa fa-check"></i><b>3</b> Machine Learning Essentials</a></li>
 <li class="part"><span><b>II Part II</b></span></li>
@@ -158,7 +174,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Distributed Machine Learning in R with Apache Spark: An Introduction Using sparklyr and rsparkling</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Distributed Machine Learning in R with Apache Spark</a>
           </h1>
         </div>
 
@@ -171,9 +187,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>TBD.</p>
 <div id="the-sparklyr-package" class="section level2">
 <h2><span class="header-section-number">2.1</span> The sparklyr package</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">library</span>(sparklyr)</a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">sc &lt;-<span class="st"> </span><span class="kw">spark_connect</span>(<span class="st">&quot;local[4]&quot;</span>)</a>
+<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="kw">class</span>(sc)</a></code></pre></div>
+<pre><code>## [1] &quot;spark_connection&quot;       &quot;spark_shell_connection&quot;
+## [3] &quot;DBIConnection&quot;</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1">pi_est &lt;-<span class="st"> </span><span class="cf">function</span>() {  <span class="co"># Monte-Carlo estimate of pi</span></a>
+<a class="sourceLine" id="cb8-2" data-line-number="2">  x &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">100000</span>)</a>
+<a class="sourceLine" id="cb8-3" data-line-number="3">  y &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">100000</span>)</a>
+<a class="sourceLine" id="cb8-4" data-line-number="4">  <span class="dv">4</span> <span class="op">*</span><span class="st"> </span><span class="kw">mean</span>(x<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span>y<span class="op">^</span><span class="dv">2</span> <span class="op">&lt;</span><span class="st"> </span><span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb8-5" data-line-number="5">}</a>
+<a class="sourceLine" id="cb8-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb8-7" data-line-number="7"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb8-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb8-9" data-line-number="9"><span class="kw">sdf_len</span>(sc, <span class="dt">length =</span> <span class="dv">10</span>, <span class="dt">repartition =</span> <span class="dv">10</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb8-10" data-line-number="10"><span class="st">  </span><span class="kw">spark_apply</span>(pi_est) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb8-11" data-line-number="11"><span class="st">  </span><span class="kw">summarize</span>(<span class="st">`</span><span class="dt">Pi estimate</span><span class="st">`</span> =<span class="st"> </span><span class="kw">mean</span>(id, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>))</a></code></pre></div>
+<pre><code>## # Source:   lazy query [?? x 1]
+## # Database: spark_connection
+##   `Pi estimate`
+##           &lt;dbl&gt;
+## 1          3.14</code></pre>
 </div>
 <div id="data-wrangling-in-spark-with-dplyr" class="section level2">
 <h2><span class="header-section-number">2.2</span> Data wrangling in Spark with dplyr</h2>
+</div>
+<div id="the-sparkr-package" class="section level2">
+<h2><span class="header-section-number">2.3</span> The sparkR package</h2>
 
 </div>
 </div>

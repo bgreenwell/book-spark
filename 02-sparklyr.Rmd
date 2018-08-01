@@ -1,8 +1,45 @@
 # Interfacing R with Spark
 
+```{r 02-setup, include=FALSE}
+knitr::opts_chunk$set(
+  cache = FALSE,
+  echo = TRUE,
+  fig.align = "left",
+  fig.width = 6,
+  fig.asp = 0.618,
+  out.width = "70%",
+  message = FALSE
+)
+```
+
 TBD.
 
 
 ## The sparklyr package
 
+
+```{r connect-to-spark}
+library(sparklyr)
+sc <- spark_connect("local[4]")  # run locally with 4 threads
+class(sc)
+```
+
+
+```{r estimate-pi}
+pi_est <- function() {  # Monte-Carlo estimate of pi
+  x <- runif(100000)
+  y <- runif(100000)
+  4 * mean(x^2 + y^2 < 1)
+}
+
+library(dplyr)
+
+sdf_len(sc, length = 10, repartition = 10) %>%
+  spark_apply(pi_est) %>%
+  summarize(`Pi estimate` = mean(id, na.rm = TRUE))
+```
+
 ## Data wrangling in Spark with dplyr
+
+
+## The sparkR package
